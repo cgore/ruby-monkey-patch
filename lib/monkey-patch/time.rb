@@ -36,7 +36,7 @@ require 'active_support/core_ext'
 
 class Time
   class << self
-    %w(commercial england gregorian italy jd jisx0301 julian ld mjd ordinal today)
+    %w(commercial england gregorian italy jd jisx0301 julian ld mjd ordinal today yesterday)
     .each do |method|
       class_eval %{
         def #{method}(*rest)
