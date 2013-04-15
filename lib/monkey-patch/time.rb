@@ -32,5 +32,17 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
-require 'monkey-patch/string'
-require 'monkey-patch/time'
+require 'active_support/core_ext'
+
+class Time
+  class << self
+    %w(commercial england gregorian italy jd jisx0301 julian ld mjd ordinal today)
+    .each do |method|
+      class_eval %{
+        def #{method}(*rest)
+          Date.#{method}(*rest).to_time
+        end
+      }
+    end
+  end
+end
