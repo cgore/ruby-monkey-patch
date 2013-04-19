@@ -32,6 +32,21 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
-require 'monkey-patch/pathname'
-require 'monkey-patch/string'
-require 'monkey-patch/time'
+require 'spec_helper'
+
+require 'monkey-patch'
+
+describe Pathname do
+  describe :=~ do
+    it "matches as the string form of the pathname" do
+      ["/etc/fstab",
+       "/home/chris/.foo.xml",
+       "../somewhere/something.json"].each do |path_string|
+        path = Pathname.new path_string
+        [/.*\.json$/, /.*\.xml/, /\/etc\/fstab/].each do |regex|
+          (path =~ regex).should == (path_string =~ regex)
+        end
+      end
+    end
+  end
+end

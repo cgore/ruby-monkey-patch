@@ -34,14 +34,15 @@
 
 Gem::Specification.new do |s|
   s.name = 'monkey-patch'
-  s.version = '0.0.3'
-  s.date = '2013-04-14'
+  s.version = '0.0.4'
+  s.date = '2013-04-19'
   s.summary = "A simple library with common monkey patches for the standard Ruby classes."
   s.description = "A simple library with common monkey patches for the standard Ruby classes."
   s.authors = ['Christopher Mark Gore']
   s.email = 'cgore@cgore.com'
   s.add_dependency 'activesupport'
   s.files = ['lib/monkey-patch.rb',
+             'lib/monkey-patch/pathname.rb',
              'lib/monkey-patch/string.rb',
 	     'lib/monkey-patch/time.rb']
   s.homepage = 'https://github.com/cgore/ruby-monkey-patch'
