@@ -1,0 +1,60 @@
+* The =ruby-monkey-patch= Ruby Library
+
+One of the best, and worst, features of Ruby is "monkey-patching", extending
+the language's built-in classes and modules to suit your desires.  This is my
+library for that.
+
+** Installation
+
+#+BEGIN_SRC sh
+gem install monkey-patch
+#+END_SRC
+
+** Usage
+
+#+BEGIN_SRC ruby
+require 'monkey-patch'
+#+END_SRC
+
+** Extensions to the =Pathname= class
+
+*** The =~ method
+
+I often want to match file path names with regular expressions.
+Calling =to_s= first kind of irritating.
+
+#+BEGIN_SRC ruby
+p = Pathname.new("/home/chris/.emacs.d/init.el")
+p =~ /$.*\.el^/ # Matches.
+#+END_SRC
+
+** Extensions to the =String= class
+
+*** The =camelcase_to_snakecase= method
+
+De-uglifies a variable name.
+
+#+BEGIN_SRC ruby
+"lookMaICodeInJava".camelcase_to_snakecase # returns "look_ma_i_code_in_java"
+#+END_SRC
+
+*** The =valid_json?= method
+
+Returns true if the string is parsable by JSON.parse, false otherwise.
+
+#+BEGIN_SRC ruby
+"blarg".valid_json? # Returns false.
+'{"foo": "bar"}'.valid_json? # Returns true.
+#+END_SRC
+
+** Extensions to the =Time= class
+
+*** Date builders: =commercial=, =england=, =gregorian=, =italy=, =jd=, =jisx0301=, =julian=, =ld=, =mjd=, =ordinal=, =today=, =yesterday=
+
+For each of the above methods that construct a =Date= class, these will then
+immediately convert it into a =Time=.  Be aware, it will use your current 
+time zone in a lot of situations.
+
+#+BEGIN_SRC ruby
+Time.commercial(2001,5,6) # Returns the Time: 2001-02-03 00:00:00 -0600
+#+END_SRC
