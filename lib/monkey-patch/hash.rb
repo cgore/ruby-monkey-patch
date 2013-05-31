@@ -32,20 +32,8 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
-Gem::Specification.new do |s|
-  s.name = 'monkey-patch'
-  s.version = '0.0.5'
-  s.date = '2013-05-31'
-  s.summary = "A simple library with common monkey patches for the standard Ruby classes."
-  s.description = "A simple library with common monkey patches for the standard Ruby classes."
-  s.authors = ['Christopher Mark Gore']
-  s.email = 'cgore@cgore.com'
-  s.add_dependency 'activesupport'
-  s.files = ['lib/monkey-patch.rb',
-             'lib/monkey-patch/enumerable.rb',
-             'lib/monkey-patch/hash.rb',
-             'lib/monkey-patch/pathname.rb',
-             'lib/monkey-patch/string.rb',
-	     'lib/monkey-patch/time.rb']
-  s.homepage = 'https://github.com/cgore/ruby-monkey-patch'
+class Hash
+  def defaults(key, default)
+    self[key] = default if self[key].nil?
+  end
 end
