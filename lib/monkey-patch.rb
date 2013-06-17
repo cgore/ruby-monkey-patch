@@ -33,7 +33,6 @@
 # POSSIBILITY OF SUCH DAMAGE.
 
 require 'monkey-patch/array'
-require 'monkey-patch/enumerable'
 require 'monkey-patch/hash'
 require 'monkey-patch/pathname'
 require 'monkey-patch/string'
