@@ -41,4 +41,12 @@ class Array
     end
     return self
   end
+
+  def pad_nil(depth)
+    self.clone.pad_nil! depth
+  end
+
+  def wide_zip(other)
+    pad_nil(other.length).zip other
+  end
 end
