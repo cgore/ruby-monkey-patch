@@ -34,14 +34,15 @@
 
 Gem::Specification.new do |s|
   s.name = 'monkey-patch'
-  s.version = '0.0.5'
-  s.date = '2013-05-31'
+  s.version = '0.0.6'
+  s.date = '2013-06-17'
   s.summary = "A simple library with common monkey patches for the standard Ruby classes."
   s.description = "A simple library with common monkey patches for the standard Ruby classes."
   s.authors = ['Christopher Mark Gore']
   s.email = 'cgore@cgore.com'
   s.add_dependency 'activesupport'
   s.files = ['lib/monkey-patch.rb',
+             'lib/monkey-patch/array.rb',
              'lib/monkey-patch/enumerable.rb',
              'lib/monkey-patch/hash.rb',
              'lib/monkey-patch/pathname.rb',

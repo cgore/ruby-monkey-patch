@@ -32,9 +32,13 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
-require 'monkey-patch/array'
-require 'monkey-patch/enumerable'
-require 'monkey-patch/hash'
-require 'monkey-patch/pathname'
-require 'monkey-patch/string'
-require 'monkey-patch/time'
+class Array
+  def pad_nil!(depth)
+    raise ArgumentError, "depth not an integer" if not depth.is_a? Integer
+    raise ArgumentError, "depth not > 1" if not depth > 1
+    if self.length < depth
+      self[depth-1] = nil
+    end
+    return self
+  end
+end
