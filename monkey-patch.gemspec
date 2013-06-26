@@ -34,8 +34,8 @@
 
 Gem::Specification.new do |s|
   s.name = 'monkey-patch'
-  s.version = '0.0.8'
-  s.date = '2013-06-17'
+  s.version = '0.0.9'
+  s.date = '2013-06-26'
   s.summary = "A simple library with common monkey patches for the standard Ruby classes."
   s.description = "A simple library with common monkey patches for the standard Ruby classes."
   s.authors = ['Christopher Mark Gore']
