@@ -1,8 +1,11 @@
-# Copyright (c) 2013, Christopher Mark Gore,
+# -*- coding: utf-8 -*-
+# -*- mode: Ruby -*-
+
+# Copyright © 2013, Christopher Mark Gore,
 # Soli Deo Gloria,
 # All rights reserved.
 #
-# 8729 Lower Marine Road, Saint Jacob, Illinois 62281 USA.
+# 2317 South River Road, Saint Charles, Missouri 63303 USA.
 # Web: http://cgore.com
 # Email: cgore@cgore.com
 #
@@ -10,15 +13,15 @@
 # modification, are permitted provided that the following conditions are met:
 #
 # * Redistributions of source code must retain the above copyright
-# notice, this list of conditions and the following disclaimer.
+#   notice, this list of conditions and the following disclaimer.
 #
 # * Redistributions in binary form must reproduce the above copyright
-# notice, this list of conditions and the following disclaimer in the
-# documentation and/or other materials provided with the distribution.
+#   notice, this list of conditions and the following disclaimer in the
+#   documentation and/or other materials provided with the distribution.
 #
 # * Neither the name of Christopher Mark Gore nor the names of other
-# contributors may be used to endorse or promote products derived from
-# this software without specific prior written permission.
+#   contributors may be used to endorse or promote products derived from
+#   this software without specific prior written permission.
 #
 # THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
 # AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
@@ -34,8 +37,8 @@
 
 Gem::Specification.new do |s|
   s.name = 'monkey-patch'
-  s.version = '0.0.9'
-  s.date = '2013-06-26'
+  s.version = '0.0.10'
+  s.date = '2013-12-10'
   s.summary = "A simple library with common monkey patches for the standard Ruby classes."
   s.description = "A simple library with common monkey patches for the standard Ruby classes."
   s.authors = ['Christopher Mark Gore']
@@ -46,6 +49,6 @@ Gem::Specification.new do |s|
              'lib/monkey-patch/hash.rb',
              'lib/monkey-patch/pathname.rb',
              'lib/monkey-patch/string.rb',
-	     'lib/monkey-patch/time.rb']
+             'lib/monkey-patch/time.rb']
   s.homepage = 'https://github.com/cgore/ruby-monkey-patch'
 end
