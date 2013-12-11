@@ -35,9 +35,8 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
-require 'monkey-patch/array'
-require 'monkey-patch/enumerable'
-require 'monkey-patch/hash'
-require 'monkey-patch/pathname'
-require 'monkey-patch/string'
-require 'monkey-patch/time'
+module Enumerable
+  def rest
+    self[1..-1]
+  end
+end

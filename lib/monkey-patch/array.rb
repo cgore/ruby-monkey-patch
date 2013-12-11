@@ -49,10 +49,6 @@ class Array
     self.clone.pad_nil! depth
   end
 
-  def rest
-    self[1..-1]
-  end
-
   def wide_zip(other)
     pad_nil(other.length).zip other
   end
