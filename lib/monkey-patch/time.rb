@@ -85,8 +85,26 @@ class Time
     Time.parse strftime "#{year - year % 10}-01-01 00:00:00 %z"
   end
 
+  def start_of_full_decade
+    decade = if year % 10 == 0
+               year - 9
+             else
+               year - year % 10 + 1
+             end
+    Time.parse strftime "#{decade}-01-01 00:00:00 %z"
+  end
+
   def start_of_century
     Time.parse strftime "#{year - year % 100}-01-01 00:00:00 %z"
+  end
+
+  def start_of_full_century
+    century = if year % 100 == 0
+                year - 99
+              else
+                year - year % 100 + 1
+              end
+    Time.parse strftime "#{century}-01-01 00:00:00 %z"
   end
 
   class << self
