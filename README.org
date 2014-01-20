@@ -1,4 +1,4 @@
-* The =ruby-monkey-patch= Ruby Library
+* The =monkey-patch= Ruby Library
 
 One of the best, and worst, features of Ruby is "monkey-patching", extending
 the language's built-in classes and modules to suit your desires.  This is my
@@ -54,6 +54,10 @@ Returns true if the string is parsable by JSON.parse, false otherwise.
 For each of the above methods that construct a =Date= class, these will then
 immediately convert it into a =Time=.  Be aware, it will use your current 
 time zone in a lot of situations.
+
+*** =start_of_second=, =start_of_minute=, =start_of_half_hour=, =start_of_hour=, =start_of_half_day=, =start_of_day=, =start_of_week=, =start_of_month=, =start_of_year=, =start_of_decade=, =start_of_century=
+
+These will all return new =Time= instances relative to the specified time, in the same time zone.
 
 #+BEGIN_SRC ruby
 Time.commercial(2001,5,6) # Returns the Time: 2001-02-03 00:00:00 -0600
