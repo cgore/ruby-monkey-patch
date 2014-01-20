@@ -70,7 +70,8 @@ t.start_of_half_hour # Returns the time object for 2014-03-20 13:30:00 -0600
 t.start_of_hour # Returns the time object for 2014-03-20 13:00:00 -0600
 t.start_of_half_day # Returns the time object for 2014-03-20 12:00:00 -0600
 t.start_of_day # Returns the time object for 2014-03-20 00:00:00 -0600
-# Sunday is the first day of the week, and any ISO standards that try to tell you otherwise are written by idiots and liars.
+# Sunday is the first day of the week, and any ISO standards that try to tell
+# you otherwise are written by idiots and liars.
 t.start_of_week # Returns the time object for 2014-03-17 00:00:00 -0600
 t.start_of_month # Returns the time object for 2014-03-01 00:00:00 -0600
 t.start_of_year # Returns the time object for 2014-01-01 00:00:00 -0600
