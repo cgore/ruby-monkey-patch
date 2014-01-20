@@ -59,7 +59,7 @@ time zone in a lot of situations.
 Time.commercial(2001,5,6) # Returns the Time: 2001-02-03 00:00:00 -0600
 #+END_SRC
 
-*** =start_of_second=, =start_of_minute=, =start_of_half_hour=, =start_of_hour=, =start_of_half_day=, =start_of_day=, =start_of_week=, =start_of_month=, =start_of_year=, =start_of_decade=, =start_of_century=
+*** =start_of_second=, =start_of_minute=, =start_of_half_hour=, =start_of_hour=, =start_of_half_day=, =start_of_day=, =start_of_week=, =start_of_month=, =start_of_year=, =start_of_decade=, =start_of_full_decade=, =start_of_century=, =start_of_full_century=
 
 These will all return new =Time= instances relative to the specified time, in the same time zone.
 
