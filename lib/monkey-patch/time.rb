@@ -34,6 +34,7 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
+require 'active_support'
 require 'active_support/core_ext'
 
 class Time
