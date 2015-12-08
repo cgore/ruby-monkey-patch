@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # -*- mode: Ruby -*-
 
-# Copyright © 2013-2015, Christopher Mark Gore,
+# Copyright © 2015, Christopher Mark Gore,
 # Soli Deo Gloria,
 # All rights reserved.
 #
@@ -35,23 +35,4 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
-Gem::Specification.new do |s|
-  s.name = 'monkey-patch'
-  s.version = '0.0.18'
-  s.date = '2015-12-08'
-  s.summary = "A simple library with common monkey patches for the standard Ruby classes."
-  s.description = "A simple library with common monkey patches for the standard Ruby classes."
-  s.authors = ['Christopher Mark Gore',
-               'Tom Mornini']
-  s.email = 'cgore@cgore.com'
-  s.add_dependency 'activesupport'
-  s.files = ['lib/monkey-patch.rb',
-             'lib/monkey_patch.rb',
-             'lib/monkey-patch/array.rb',
-             'lib/monkey-patch/enumerable.rb',
-             'lib/monkey-patch/hash.rb',
-             'lib/monkey-patch/pathname.rb',
-             'lib/monkey-patch/string.rb',
-             'lib/monkey-patch/time.rb']
-  s.homepage = 'https://github.com/cgore/ruby-monkey-patch'
-end
+require 'monkey-patch'
